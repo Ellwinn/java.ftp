@@ -27,8 +27,8 @@ public class solenisftp{
     public static void main(String[] args) {
         String server = "ftp.grants-mailing.ca";
         int port = 21;
-        String user = "solenis";
-        String pass = "Irm341998";
+        String user = "";
+        String pass = "";
  
         FTPClient ftpClient = new FTPClient();
         try {
@@ -39,8 +39,8 @@ public class solenisftp{
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
  
             // APPROACH #1: using retrieveFile(String, OutputStream)
-            String remoteFile1 = "/fulcanada.solenis.1021150119.pdf";
-            File downloadFile1 = new File("D:/ACCOUNTS/ELLWIN FILES/test/fulcanada.solenis.1021150119.pdf");
+            String remoteFile1 = "/hhh.pdf";
+            File downloadFile1 = new File("D:/ACCOUNTS/FILES/test/hhh.pdf");
             OutputStream outputStream1 = new BufferedOutputStream(new FileOutputStream(downloadFile1));
             boolean success = ftpClient.retrieveFile(remoteFile1, outputStream1);
             outputStream1.close();
@@ -50,8 +50,8 @@ public class solenisftp{
             }
  
             // APPROACH #2: using InputStream retrieveFileStream(String)
-            String remoteFile2 = "/fulcanada.solenis.1020150117.pdf";
-            File downloadFile2 = new File("D:/ACCOUNTS/ELLWIN FILES/test/fulcanada.solenis.1020150117.pdf");
+            String remoteFile2 = "/hhh.pdf";
+            File downloadFile2 = new File("D:/ACCOUNTS/FILES/test/hhh.pdf");
             OutputStream outputStream2 = new BufferedOutputStream(new FileOutputStream(downloadFile2));
             InputStream inputStream = ftpClient.retrieveFileStream(remoteFile2);
             byte[] bytesArray = new byte[4096];
