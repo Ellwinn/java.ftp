@@ -25,7 +25,7 @@ import org.apache.commons.net.ftp.FTPClient;
 public class solenisftp{
  
     public static void main(String[] args) {
-        String server = "ftp.xxx.ca";
+        String server = "ftp.sample.ca";
         int port = 21;
         String user = "";
         String pass = "";
